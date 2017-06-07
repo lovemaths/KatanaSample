@@ -1,0 +1,34 @@
+﻿@using System.Security.Claims;
+<div class="container body-content">
+    <p />
+    <div class="badge">
+        <h3>KatanaSample - Home</h3>
+    </div>
+    <p />
+
+    @if (ViewBag.ClaimsPrincipal != null)
+    {
+        <div class="badge">
+            Identity
+        </div>
+        <p />
+        <table style="width:100%;" title="Claims Identity">
+            <tr><td style="bold">ClaimType</td><td style="bold"> Value</td></tr>
+            @foreach (Claim c in ViewBag.ClaimsPrincipal.Claims)
+            {
+                <tr><td>@c.Type</td><td>@c.Value</td></tr>
+            }
+        </table>
+        if (ViewBag.Jwt != null)
+        {
+            <div class="badge">
+                Jwt
+            </div>
+            <p />
+            <p>@ViewBag.Jwt.ToString()</p>
+            <p>@ViewBag.Jwt.Header.SerializeToJson()</p>
+            <p>@ViewBag.Jwt.Payload.SerializeToJson()</p>
+        }
+    }
+</div>
+
