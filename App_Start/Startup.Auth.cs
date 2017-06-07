@@ -31,11 +31,11 @@ namespace KatanaSample
             //logger.WriteVerbose("App is starting up");
             //logger.WriteInformation("App is starting up");
 
-            string authority = "https://login.microsoftonline.com/cyrano.onmicrosoft.com/";
+            string authority = "https://login.microsoftonline.com/sijun.onmicrosoft.com/";
             string clientAddress = "http://localhost:42023/";
-            string clientId = "fe78e0b4-6fe7-47e6-812c-fb75cee266a4";
+            string clientId = "e3b475b5-2f59-4a71-86e9-821b9f533cd3";
             string oidcMetadataAddress = authority + ".well-known/openid-configuration";
-            string wsFedMetadataAddress = "https://login.microsoftonline.com/add29489-7269-41f4-8841-b63c95564420/federationmetadata/2007-06/federationmetadata.xml";
+            string wsFedMetadataAddress = "https://login.microsoftonline.com/268da1a1-9db4-48b9-b1fe-683250ba90cc/federationmetadata/2007-06/federationmetadata.xml";
 
             ServicePointManager.ServerCertificateValidationCallback = ValidateServerCert;
             app.SetDefaultSignInAsAuthenticationType(OpenIdConnectAuthenticationDefaults.AuthenticationType);
