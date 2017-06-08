@@ -70,7 +70,7 @@ namespace KatanaSample
                         return Task.FromResult<object>(null);
                     },
                 },
-                PostLogoutRedirectUri = string.Format(CultureInfo.InvariantCulture, "{0}Account/SignedOut", clientAddress),
+                PostLogoutRedirectUri = string.Format(CultureInfo.InvariantCulture, "{0}", clientAddress),
                 RedirectUri = clientAddress,
                 ResponseType = OpenIdConnectResponseType.IdToken,
             };
